@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FrameDeck Extension</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <span class="brand">FrameDeck</span>
+        <span class="subtitle">Chrome Extension</span>
+      </header>
+
+      <div class="actions">
+        <button id="btn-capture-tab" class="btn-primary">
+          Capture Tab to Clipboard (Alt+S)
+        </button>
+        <button id="btn-open-studio" class="btn-secondary">
+          Open Recording &amp; Editor Studio
+        </button>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+
+      <section class="panel">
+        <h2>Interactive Page Recording FX</h2>
+
+        <label class="toggle-row">
+          <span>Enable Page FX</span>
+          <input type="checkbox" id="chk-effects" />
+        </label>
+
+        <label class="toggle-row">
+          <span>Double-Tap Mouse Zoom</span>
+          <input type="checkbox" id="chk-zoom" />
+        </label>
+
+        <label class="toggle-row">
+          <span>Hold-Drag Sentence Highlight</span>
+          <input type="checkbox" id="chk-highlight" />
+        </label>
+
+        <div class="field">
+          <label for="input-studio-url">Studio App URL</label>
+          <input id="input-studio-url" type="url" placeholder="https://..." />
+        </div>
+      </section>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

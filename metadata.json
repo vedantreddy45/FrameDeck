@@ -1,0 +1,6 @@
+{
+  "name": "FrameDeck",
+  "description": "High-quality laptop screenshot and screen video recording studio with vibrant custom backgrounds, simultaneous mic and system audio capture, hotkey shortcuts, and instant clipboard copy.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

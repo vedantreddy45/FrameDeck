@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "FrameDeck — Capture, Zoom & Studio Recorder",
+  "version": "1.0.0",
+  "description": "Take crisp screenshots directly to clipboard, toggle double-tap zoom and PDF-style sentence highlighting on any webpage, and launch FrameDeck Studio.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "clipboardWrite"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "take-screenshot": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Capture current tab screenshot and copy to clipboard"
+    },
+    "toggle-effects": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Toggle double-tap zoom and sentence highlight mode"
+    }
+  }
+}
